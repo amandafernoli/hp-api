@@ -1,5 +1,0 @@
-[api]
-port = "2000"
-
-[external]
-url = "https://hp-api.onrender.com/api"

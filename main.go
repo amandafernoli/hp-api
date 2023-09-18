@@ -22,6 +22,7 @@ func main() {
 	r := chi.NewRouter()
 	r.Get("/{id}", characters.Get)
 	r.Get("/characters", characters.List)
+	r.Get("/characters/house/{house}", characters.ListByHouse)
 	r.Get("/spells", spells.List)
 
 	http.ListenAndServe(fmt.Sprintf(":%s", configs.GetServerPort()), r)
