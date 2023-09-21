@@ -6,13 +6,14 @@ import (
 	"hp-api/externals"
 	characters "hp-api/handlers/characters"
 	spells "hp-api/handlers/spells"
+	"hp-api/utils"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
 )
 
 func main() {
-	fmt.Println("Hello Hogwarts Student!")
+	utils.PrintWelcome()
 
 	err := externals.ConnectApi()
 	if err != nil {
